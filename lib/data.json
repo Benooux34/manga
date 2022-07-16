@@ -1,0 +1,72 @@
+[
+    {
+        "id": "snk",
+        "name": "Attaque des Titans",
+        "auteur": "Hajime Isayama",
+        "icon": "/snkIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "berserk",
+        "name": "Berserk",
+        "auteur": "Kentaro Miura",
+        "icon": "/berserkIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "bleach",
+        "name": "Bleach",
+        "auteur": "", 
+        "icon": "/bleachIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "chainsawman",
+        "name": "Chainsaw Man",
+        "auteur": "Tatsuki Fujimoto", 
+        "icon": "/chainsawmanIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "deathnote",
+        "name": "Death Note",
+        "auteur": "Tsugumi Ōba", 
+        "icon": "/deathnoteIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "demonslayer",
+        "name": "Demon Slayer",
+        "auteur": "Koyoharu Gotōge", 
+        "icon": "/demonslayerIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "dragonballz",
+        "name": "Dragon Ball Z",
+        "auteur": "Akira Toriyama", 
+        "icon": "/dragonballzIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "hunterxhunter",
+        "name": "Hunter X Hunter",
+        "auteur": "Yoshihiro Togashi", 
+        "icon": "/hunterIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "naruto",
+        "name": "Naruto",
+        "auteur": "Masashi Kishimoto",
+        "icon": "/narutoIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "onepiece",
+        "name": "One Piece",
+        "auteur": "Eiichirō Oda",
+        "icon": "/onepieceIcon.jpg",
+        "img": "/img"
+    }
+]
