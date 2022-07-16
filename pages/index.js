@@ -24,7 +24,7 @@ export default function Home() {
       {/* Titre */}
       <div className="text-center mt-10 mx-10">
         <h1 className="text-white text-2xl sm:text-5xl font-light tracking-widest mb-[30px] sm:mb-5">Freedom|Manga</h1>
-        <span className="text-orange-400">Attention Spoiler ! Certaines planches peuvent vous spoiler, si vous n'êtes pas à jour.</span>
+        <span className="text-orange-400">Attention Spoiler ! Certaines planches peuvent vous spoiler, si vous n&apos;êtes pas à jour.</span>
       </div>
 
       {/* Barre de recherche */}
