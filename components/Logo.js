@@ -6,7 +6,7 @@ function Logo() {
     <div>
         <Link href="/">
             <div className="absolute cursor-pointer top-3">
-                <img className="h-20" src="/logo.png" alt="" />
+                <img className="h-[60px] sm:h-20" src="/logo.png" alt="" />
             </div>
         </Link>
     </div>

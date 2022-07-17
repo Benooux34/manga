@@ -16,8 +16,15 @@
     {
         "id": "bleach",
         "name": "Bleach",
-        "auteur": "", 
+        "auteur": "Tite Kubo", 
         "icon": "/bleachIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "bluelock",
+        "name": "Blue Lock",
+        "auteur": "Nomura Yûsuke", 
+        "icon": "/bluelockIcon.jpg",
         "img": "/img"
     },
     {
@@ -56,6 +63,20 @@
         "img": "/img"
     },
     {
+        "id": "jujutsukaisen",
+        "name": "Jujutsu Kaisen",
+        "auteur": "Gege Akutami", 
+        "icon": "/jujutsukaisenIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "kingdom",
+        "name": "Kingdom",
+        "auteur": "Yasuhisa Hara", 
+        "icon": "/kingdomIcon.jpg",
+        "img": "/img"
+    },
+    {
         "id": "naruto",
         "name": "Naruto",
         "auteur": "Masashi Kishimoto",
@@ -67,6 +88,20 @@
         "name": "One Piece",
         "auteur": "Eiichirō Oda",
         "icon": "/onepieceIcon.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "slamdunk",
+        "name": "Slam Dunk",
+        "auteur": "Takehiko Inoue", 
+        "icon": "/slamdunk.jpg",
+        "img": "/img"
+    },
+    {
+        "id": "spyfamily",
+        "name": "Spy x Family",
+        "auteur": "", 
+        "icon": "/spyfamilyIcon.jpg",
         "img": "/img"
     }
 ]

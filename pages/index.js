@@ -3,12 +3,43 @@ import Link from 'next/link';
 import { motion } from "framer-motion"
 import { BsSearch } from "react-icons/bs";
 import Logo from '../components/Logo';
+import { useState } from 'react';
 
 import datas from "../lib/data.json"
 
 
 export default function Home() {
 
+  const [query, setQuery] = useState("")
+  const [results, setResults] = useState("")
+
+  const onChange = (e) => {
+    const { value } = e.target
+    setQuery(value)
+
+    let matchingData = []
+
+    if (value.length > 1) {
+      for(let d of datas) {
+        if (matchingData.length >= 2) {
+          break;
+        }
+
+        const match = d.name.toLowerCase().startsWith(value.toLowerCase())
+
+        if (match) {
+          const mangaData = {
+            ...d,
+            slug: `${d.name.toLowerCase().replace(/ /g, "-")}-${d.id}`
+          }
+
+          matchingData.push(mangaData);
+          continue;
+        }
+      }
+    }
+    return setResults(matchingData)
+  }
 
   return (
     <div>
@@ -24,14 +55,43 @@ export default function Home() {
       {/* Titre */}
       <div className="text-center mt-10 mx-10">
         <h1 className="text-white text-2xl sm:text-5xl font-light tracking-widest mb-[30px] sm:mb-5">Freedom|Manga</h1>
-        <span className="text-orange-400">Attention Spoiler ! Certaines planches peuvent vous spoiler, si vous n&apos;êtes pas à jour.</span>
+        <span className="text-orange-400">Attention Spoiler ! Certaines planches peuvent vous spoiler.</span>
       </div>
 
       {/* Barre de recherche */}
-      <div className="flex justify-center items-center mt-[30px] sm:mt-[40px]">
-        <input className="w-[250px] sm:w-[50%] pl-3 py-[10px] sm:py-[15px] bg-[#727272] rounded-l-[10px] text-white outline-none" placeholder="Cherchez votre manga..." />
-        <div className="bg-[#727272] px-[10px] py-[12px] sm:py-[17px] rounded-r-[10px]">
-          <BsSearch color='white' font-size='20' />
+      <div className="mx-[10%] sm:mx-[24%]">
+        <div className="flex justify-center items-center mt-[30px] sm:mt-[40px]">
+          <input className="w-[100%] pl-3 py-[10px] sm:py-[15px] bg-[#727272] rounded-l-[10px] text-white outline-none" placeholder="Cherchez votre manga..." value={query} onChange={onChange} />
+          <div className="bg-[#727272] px-[10px] py-[12px] sm:py-[17px] rounded-r-[10px]">
+            <BsSearch color='white' font-size='20' />
+          </div>
+        </div>
+        <div className="bg-[#727272] rounded-[10px]">
+          {query.length > 1 && (
+            <ul className="py-3 px-3 text-white space-y-3 mt-2">
+              {results.length > 0 ? (
+                results.map((d) => {
+                  return(
+                    <li key={d.id}>
+                      <Link href={{
+                        pathname: "manga/[id]",
+                        query: {
+                          id: d.id,
+                          name: d.name,
+                          auteur: d.auteur,
+                          img: d.img
+                        }
+                      }}>
+                        <a className="border border-[#727272] border-b-white">{d.name}</a>
+                      </Link>
+                    </li>
+                  )
+                })
+               ) : (
+                <li>Aucun Résultat</li>
+              )}
+            </ul>
+           )}
         </div>
       </div>
 
